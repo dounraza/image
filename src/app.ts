@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static folder for uploaded images
-app.use('/avatars', express.static(path.join(path.dirname(__dirname), 'avatars')));
+app.use('/avatars', express.static(path.join(process.cwd(), 'avatars')));
 
 // Routes
 app.use('/api', uploadRoutes);
